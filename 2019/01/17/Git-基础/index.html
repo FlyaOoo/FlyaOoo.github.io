@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="[TOC] Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的">
+  <meta name="description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
 <meta name="keywords" content="git,git入门,工具必会">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 基础">
 <meta property="og:url" content="http://yoursite.com/2019/01/17/Git-基础/index.html">
 <meta property="og:site_name" content="FlyaOoo">
-<meta property="og:description" content="[TOC] Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的">
+<meta property="og:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-17T14:52:53.405Z">
+<meta property="og:updated_time" content="2019-01-17T15:05:45.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 基础">
-<meta name="twitter:description" content="[TOC] Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的">
+<meta name="twitter:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
 
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-17 10:30:16 / 修改时间：22:52:53" itemprop="dateCreated datePublished" datetime="2019-01-17T10:30:16+08:00">2019-01-17</time>
+              <time title="创建时间：2019-01-17 10:30:16 / 修改时间：23:05:45" itemprop="dateCreated datePublished" datetime="2019-01-17T10:30:16+08:00">2019-01-17</time>
             
 
             
@@ -439,32 +439,39 @@
       
 
       
-        <p>[TOC]</p>
-<h2 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h2><ul>
+        <h2 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h2><ul>
 <li><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3>首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用<code>版本控制系统</code>（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要的任何时刻，前提是那个时刻你要做修改记录，毕竟VCS也不知道你要保存哪个版本。</li>
 <li><h3 id="VCS"><a href="#VCS" class="headerlink" title="VCS"></a>VCS</h3>没错，Git也是一种VCS。但是Git却又不是普通的VCS。在最早期，人们使用复制文件再加上标注的方式来做版本控制，但是很明显这种方式不够妥当容易出错（毕竟人不是机器，不能记住所有事情）。随后，就有人想出了使用数据库来记录文件每次更新的差异，工作原理就是在硬盘上记录每次修改的之后前后的差异，这个差异称为补丁，通过补丁就能计算出各个版本的文件内容，这就是<code>本地版本控制系统</code>。再后来人们就想如何在不同的设备机器上来进行协同工作，于是<code>集中化的版本控制系统</code>就诞生了，其中比较出名的就有广为人知的SVN。集中化的版本控制系统（CVCS）把文件集中到一个单一的集中管理的服务器，保存所有文件的修订，而协同工作的人每次只需要取出最新的文件或者提交更新。<br>&nbsp;<br>事情总会有好坏，CVCS又一个显而易见的问题，就是单点管理的服务器故障了，将会可能带来灾难性的后果。试想，存储文件的服务器硬盘由于某种原因坏了，而又没有做任何备份，很不幸<strong>所有的数据</strong>以及<strong>变更历史都会消失</strong>，剩下只有保存在各个客户端的单独快照。<br>&nbsp;<br>于是<code>分布式的版本管理系统</code>（DVCS）就问世了:tada:。和CVCS最大的区别就是，DVCS的客户端会把整个代码仓库镜像下来，而不是只保存最新的文件快照。</li>
 <li><h3 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h3>伟大的Linus在Linux内核开发过程中每天都要接受来自世界各地代码提交，都要自己手工<code>code review</code>最后再手工<code>merge code</code>。即便是Linus，也不能忍受这种令人痛楚的事情，于是找到当时的一个叫做BikKeeper的公司来帮助管理和维护代码。好景不长，BikKeeper的工程师发现了Linux的开发者试图侵入公司的内部网络，结果可想而知。可是我们的大神Linus再次用实力告诉你什么叫做牛逼、什么叫无敌。他花了两周整理思路并且完整开发了一套分布式的版本管理系统，没错就是Git的原型。</li>
 </ul>
 <h2 id="Git基础认识"><a href="#Git基础认识" class="headerlink" title="Git基础认识"></a>Git基础认识</h2><blockquote>
-<h3 id="直接记录快照-camera"><a href="#直接记录快照-camera" class="headerlink" title="直接记录快照 :camera:"></a>直接记录快照 :camera:</h3><p>和 <code>CVCS</code>不同的是，Git是会记录每次提交更新后的整个文件快照和快照索引，这样就形成了一个类似文件的<code>快照流</code>的东东。</p>
-<h3 id="本地操作，速度飞起-rocket"><a href="#本地操作，速度飞起-rocket" class="headerlink" title="本地操作，速度飞起 :rocket:"></a>本地操作，速度飞起 :rocket:</h3><p>因为Git会在每个客户端分布镜像整个仓库的特性，让几乎所有操作都可以本地化，就算暂时没有网络服务或者 VPN你也可以进行 <code>差异比较</code>、<code>版本更新</code>、<code>提交</code> 等一系列工作。</p>
-<h3 id="保证数据完整性-pushpin"><a href="#保证数据完整性-pushpin" class="headerlink" title="保证数据完整性 :pushpin:"></a>保证数据完整性 :pushpin:</h3><p>Git会为每次的要存储的数据进行校验和，采用<code>SHA-1散列</code>算法。具体会在Git底层原理讲解。Git会根据<code>hashvalue</code>来索引数据，所有如果数据的任何变化都瞒不过Git。想知道hash:arrow_right:<a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">传送门</a></p>
-<h3 id="一般只添加数据-bookmark"><a href="#一般只添加数据-bookmark" class="headerlink" title="一般只添加数据 :bookmark:"></a>一般只添加数据 :bookmark:</h3><p>对于正常的Git操作，只会向着Git仓库添加数据，所以不要担心数据的丢失、弄乱的问题，你可以放心的折腾。具体情况会在Git底层原理讲解。</p>
-<h3 id="三种状态-dango"><a href="#三种状态-dango" class="headerlink" title="三种状态 :dango:"></a>三种状态 :dango:</h3><p><strong>重点来了、重点来了、重点来了</strong><br>三种状态分别是：<strong>已修改</strong> <strong>已暂存</strong> <strong>已提交</strong><br>首先来介绍下Git的三个工作区域：</p>
+<h3 id="直接记录快照-📷"><a href="#直接记录快照-📷" class="headerlink" title="直接记录快照 📷"></a>直接记录快照 📷</h3></blockquote>
+<p>和 <code>CVCS</code>不同的是，Git是会记录每次提交更新后的整个文件快照和快照索引，这样就形成了一个类似文件的<code>快照流</code>的东东。</p>
+<blockquote>
+<h3 id="本地操作，速度飞起-🚀"><a href="#本地操作，速度飞起-🚀" class="headerlink" title="本地操作，速度飞起 🚀"></a>本地操作，速度飞起 🚀</h3></blockquote>
+<p>因为Git会在每个客户端分布镜像整个仓库的特性，让几乎所有操作都可以本地化，就算暂时没有网络服务或者 VPN你也可以进行 <code>差异比较</code>、<code>版本更新</code>、<code>提交</code> 等一系列工作。</p>
+<blockquote>
+<h3 id="保证数据完整性-📌"><a href="#保证数据完整性-📌" class="headerlink" title="保证数据完整性 📌"></a>保证数据完整性 📌</h3></blockquote>
+<p>Git会为每次的要存储的数据进行校验和，采用<code>SHA-1散列</code>算法。具体会在Git底层原理讲解。Git会根据<code>hashvalue</code>来索引数据，所有如果数据的任何变化都瞒不过Git。想知道hash:arrow_right:<a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">传送门</a></p>
+<blockquote>
+<h3 id="一般只添加数据-🔖"><a href="#一般只添加数据-🔖" class="headerlink" title="一般只添加数据 🔖"></a>一般只添加数据 🔖</h3></blockquote>
+<p>对于正常的Git操作，只会向着Git仓库添加数据，所以不要担心数据的丢失、弄乱的问题，你可以放心的折腾。具体情况会在Git底层原理讲解。</p>
+<blockquote>
+<h3 id="三种状态-🍡"><a href="#三种状态-🍡" class="headerlink" title="三种状态 🍡"></a>三种状态 🍡</h3></blockquote>
+<p><strong>重点来了、重点来了、重点来了</strong><br>三种状态分别是：<strong>已修改</strong> <strong>已暂存</strong> <strong>已提交</strong><br>首先来介绍下Git的三个工作区域：</p>
 <ul>
 <li><strong>工作目录</strong><br>从Git数据仓库中提取出来的文件，放在硬盘上供你使用修改。</li>
 <li><strong>暂存区域</strong><br>保存了下次提交的文件信息列表。</li>
 <li><strong>Git仓库</strong><br>保存所有元数据和对象数据库的地方，这很重要，其实执行<code>git clone</code>就是克隆的这里的数据。</li>
 </ul>
-</blockquote>
 <p>所以基本的git操作流程就如下了：</p>
 <ol>
 <li>在工作目录修改文件。</li>
 <li>暂存文件，将文件快照放入暂存区域。</li>
 <li>提交更新，将暂存区的文件快照永久存储到Git仓库目录下。</li>
 </ol>
-<p>到这里，三种状态的解释就不言而喻了。（:beer:不要说不知道）</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本章节对Git的由来历史以及基础认知做了简单介绍，具体的内容可以去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a>详细了解。谢谢大家的观看，欢迎大家来给我<a href="https://github.com/FlyaOoo/FlyaOoo.github.io" target="_blank" rel="noopener">提issue</a>，也别忘了给我一颗star :100:。</p>
+<p>到这里，三种状态的解释就不言而喻了。（🍺不要说不知道）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本章节对Git的由来历史以及基础认知做了简单介绍，具体的内容可以去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a>详细了解。谢谢大家的观看，欢迎大家来给我<a href="https://github.com/FlyaOoo/FlyaOoo.github.io" target="_blank" rel="noopener">提issue</a>，也别忘了给我一颗star ✨。</p>
 <hr>
 <div style="text-align: right">&copy;Written By flyaooo </div>
       
@@ -686,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git是什么"><span class="nav-number">1.</span> <span class="nav-text">Git是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VCS"><span class="nav-number">1.2.</span> <span class="nav-text">VCS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git介绍"><span class="nav-number">1.3.</span> <span class="nav-text">Git介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git基础认识"><span class="nav-number">2.</span> <span class="nav-text">Git基础认识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接记录快照-camera"><span class="nav-number">2.1.</span> <span class="nav-text">直接记录快照 :camera:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地操作，速度飞起-rocket"><span class="nav-number">2.2.</span> <span class="nav-text">本地操作，速度飞起 :rocket:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保证数据完整性-pushpin"><span class="nav-number">2.3.</span> <span class="nav-text">保证数据完整性 :pushpin:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一般只添加数据-bookmark"><span class="nav-number">2.4.</span> <span class="nav-text">一般只添加数据 :bookmark:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种状态-dango"><span class="nav-number">2.5.</span> <span class="nav-text">三种状态 :dango:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git是什么"><span class="nav-number">1.</span> <span class="nav-text">Git是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VCS"><span class="nav-number">1.2.</span> <span class="nav-text">VCS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git介绍"><span class="nav-number">1.3.</span> <span class="nav-text">Git介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git基础认识"><span class="nav-number">2.</span> <span class="nav-text">Git基础认识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接记录快照-📷"><span class="nav-number">2.1.</span> <span class="nav-text">直接记录快照 📷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地操作，速度飞起-🚀"><span class="nav-number">2.2.</span> <span class="nav-text">本地操作，速度飞起 🚀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保证数据完整性-📌"><span class="nav-number">2.3.</span> <span class="nav-text">保证数据完整性 📌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一般只添加数据-🔖"><span class="nav-number">2.4.</span> <span class="nav-text">一般只添加数据 🔖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种状态-🍡"><span class="nav-number">2.5.</span> <span class="nav-text">三种状态 🍡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
