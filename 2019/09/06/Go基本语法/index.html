@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="FlyaOoo">
 <meta property="og:description" content="Golang学习Hello World1234567package mainimport &quot;fmt&quot;func main() &amp;#123;  fmt.Println(&quot;Hello World&quot;)&amp;#125; Variables assignment12var age intage = 20 12// recommandedage := 20 12// unpack, like python.name">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-06T17:07:21.213Z">
+<meta property="og:updated_time" content="2019-09-06T17:12:18.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go基本语法">
 <meta name="twitter:description" content="Golang学习Hello World1234567package mainimport &quot;fmt&quot;func main() &amp;#123;  fmt.Println(&quot;Hello World&quot;)&amp;#125; Variables assignment12var age intage = 20 12// recommandedage := 20 12// unpack, like python.name">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-07 01:07:21" itemprop="dateModified" datetime="2019-09-07T01:07:21+08:00">2019-09-07</time>
+                <time title="修改时间：2019-09-07 01:12:18" itemprop="dateModified" datetime="2019-09-07T01:12:18+08:00">2019-09-07</time>
               
             
           </span>
@@ -481,7 +481,7 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> res, err := getResult(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">  doRightThing()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>switch</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> sex &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"male"</span>: </span><br><span class="line">    fmt.Println(<span class="string">"hi, man"</span>)</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"female:</span></span><br><span class="line"><span class="string">    fmt.Println("</span>hi, women<span class="string">")</span></span><br><span class="line"><span class="string">  default:</span></span><br><span class="line"><span class="string">    fmt.Println("</span>excuse me, who are you?<span class="string">")</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> sex &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"male"</span>: </span><br><span class="line">    fmt.Println(<span class="string">"hi, man"</span>)</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"female"</span>:</span><br><span class="line">    fmt.Println(<span class="string">"hi, women"</span>)</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    fmt.Println(<span class="string">"excuse me, who are you?"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>for range loop</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">slice := []<span class="keyword">string</span>&#123;<span class="string">"h"</span>, <span class="string">"e"</span>, <span class="string">"l"</span>, <span class="string">"l"</span>, <span class="string">"o"</span>&#125;</span><br><span class="line"><span class="keyword">for</span> index, item := <span class="keyword">range</span> slice &#123;</span><br><span class="line">  fmt.Printf(<span class="string">"%d====&gt;&gt;%s"</span>, index, item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
