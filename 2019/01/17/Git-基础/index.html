@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
+  <meta name="description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要">
 <meta name="keywords" content="git,git入门,工具必会">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 基础">
 <meta property="og:url" content="http://yoursite.com/2019/01/17/Git-基础/index.html">
 <meta property="og:site_name" content="FlyaOoo">
-<meta property="og:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
+<meta property="og:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-17T15:05:45.468Z">
+<meta property="og:updated_time" content="2019-09-07T17:09:40.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 基础">
-<meta name="twitter:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你">
+<meta name="twitter:description" content="Git是什么 引言首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用版本控制系统（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要">
 
 
 
@@ -383,12 +383,24 @@
                 
               
 
-              <time title="创建时间：2019-01-17 10:30:16 / 修改时间：23:05:45" itemprop="dateCreated datePublished" datetime="2019-01-17T10:30:16+08:00">2019-01-17</time>
+              <time title="创建时间：2019-01-17 10:30:16" itemprop="dateCreated datePublished" datetime="2019-01-17T10:30:16+08:00">2019-01-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-08 01:09:40" itemprop="dateModified" datetime="2019-09-08T01:09:40+08:00">2019-09-08</time>
               
             
           </span>
@@ -440,8 +452,8 @@
 
       
         <h2 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h2><ul>
-<li><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3>首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制（强行解释:tada:）。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用<code>版本控制系统</code>（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要的任何时刻，前提是那个时刻你要做修改记录，毕竟VCS也不知道你要保存哪个版本。</li>
-<li><h3 id="VCS"><a href="#VCS" class="headerlink" title="VCS"></a>VCS</h3>没错，Git也是一种VCS。但是Git却又不是普通的VCS。在最早期，人们使用复制文件再加上标注的方式来做版本控制，但是很明显这种方式不够妥当容易出错（毕竟人不是机器，不能记住所有事情）。随后，就有人想出了使用数据库来记录文件每次更新的差异，工作原理就是在硬盘上记录每次修改的之后前后的差异，这个差异称为补丁，通过补丁就能计算出各个版本的文件内容，这就是<code>本地版本控制系统</code>。再后来人们就想如何在不同的设备机器上来进行协同工作，于是<code>集中化的版本控制系统</code>就诞生了，其中比较出名的就有广为人知的SVN。集中化的版本控制系统（CVCS）把文件集中到一个单一的集中管理的服务器，保存所有文件的修订，而协同工作的人每次只需要取出最新的文件或者提交更新。<br>&nbsp;<br>事情总会有好坏，CVCS又一个显而易见的问题，就是单点管理的服务器故障了，将会可能带来灾难性的后果。试想，存储文件的服务器硬盘由于某种原因坏了，而又没有做任何备份，很不幸<strong>所有的数据</strong>以及<strong>变更历史都会消失</strong>，剩下只有保存在各个客户端的单独快照。<br>&nbsp;<br>于是<code>分布式的版本管理系统</code>（DVCS）就问世了:tada:。和CVCS最大的区别就是，DVCS的客户端会把整个代码仓库镜像下来，而不是只保存最新的文件快照。</li>
+<li><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3>首先在了解什么是git之前，有必要先要知道什么是版本控制。版本控制，顾名思义，就是对某个事件的版本进行控制。假设你是一名设计师:alien:，希望能够记录保存某件作品的所有版本以及各个版本之间的差异，采用<code>版本控制系统</code>（VCS）将会是你不二的选择。因为这样你可以任意地查看、回退到任一个版本，并对其修改，这一操作是递归式的，所以不要担心数据的丢失，就算你乱改一通也可以回到你想要的任何时刻，前提是那个时刻你要做修改记录，毕竟VCS也不知道你要保存哪个版本。</li>
+<li><h3 id="VCS"><a href="#VCS" class="headerlink" title="VCS"></a>VCS</h3>没错，Git也是一种VCS。但是Git却又不是普通的VCS。在最早期，人们使用复制文件再加上标注的方式来做版本控制，但是很明显这种方式不够妥当容易出错（毕竟人不是机器，不能记住所有事情）。随后，就有人想出了使用数据库来记录文件每次更新的差异，工作原理就是在硬盘上记录每次修改的之后前后的差异，这个差异称为补丁，通过补丁就能计算出各个版本的文件内容，这就是<code>本地版本控制系统</code>。再后来人们就想如何在不同的设备机器上来进行协同工作，于是<code>集中化的版本控制系统</code>就诞生了，其中比较出名的就有广为人知的SVN。集中化的版本控制系统（CVCS）把文件集中到一个单一的集中管理的服务器，保存所有文件的修订，而协同工作的人每次只需要取出最新的文件或者提交更新。<br>&nbsp;<br>事情总会有好坏，CVCS又一个显而易见的问题，就是单点管理的服务器故障了，将会可能带来灾难性的后果。试想，存储文件的服务器硬盘由于某种原因坏了，而又没有做任何备份，很不幸<strong>所有的数据</strong>以及<strong>变更历史都会消失</strong>，剩下只有保存在各个客户端的单独快照。<br>&nbsp;<br>于是<code>分布式的版本管理系统</code>（DVCS）就问世了。和CVCS最大的区别就是，DVCS的客户端会把整个代码仓库镜像下来，而不是只保存最新的文件快照。</li>
 <li><h3 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h3>伟大的Linus在Linux内核开发过程中每天都要接受来自世界各地代码提交，都要自己手工<code>code review</code>最后再手工<code>merge code</code>。即便是Linus，也不能忍受这种令人痛楚的事情，于是找到当时的一个叫做BikKeeper的公司来帮助管理和维护代码。好景不长，BikKeeper的工程师发现了Linux的开发者试图侵入公司的内部网络，结果可想而知。可是我们的大神Linus再次用实力告诉你什么叫做牛逼、什么叫无敌。他花了两周整理思路并且完整开发了一套分布式的版本管理系统，没错就是Git的原型。</li>
 </ul>
 <h2 id="Git基础认识"><a href="#Git基础认识" class="headerlink" title="Git基础认识"></a>Git基础认识</h2><blockquote>
@@ -452,7 +464,7 @@
 <p>因为Git会在每个客户端分布镜像整个仓库的特性，让几乎所有操作都可以本地化，就算暂时没有网络服务或者 VPN你也可以进行 <code>差异比较</code>、<code>版本更新</code>、<code>提交</code> 等一系列工作。</p>
 <blockquote>
 <h3 id="保证数据完整性-📌"><a href="#保证数据完整性-📌" class="headerlink" title="保证数据完整性 📌"></a>保证数据完整性 📌</h3></blockquote>
-<p>Git会为每次的要存储的数据进行校验和，采用<code>SHA-1散列</code>算法。具体会在Git底层原理讲解。Git会根据<code>hashvalue</code>来索引数据，所有如果数据的任何变化都瞒不过Git。想知道hash:arrow_right:<a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">传送门</a></p>
+<p>Git会为每次的要存储的数据进行校验和，采用<code>SHA-1散列</code>算法。具体会在Git底层原理讲解。Git会根据<code>hashvalue</code>来索引数据，所有如果数据的任何变化都瞒不过Git。<a href="https://baike.baidu.com/item/Hash/390310?fr=aladdin" target="_blank" rel="noopener">hash解释</a></p>
 <blockquote>
 <h3 id="一般只添加数据-🔖"><a href="#一般只添加数据-🔖" class="headerlink" title="一般只添加数据 🔖"></a>一般只添加数据 🔖</h3></blockquote>
 <p>对于正常的Git操作，只会向着Git仓库添加数据，所以不要担心数据的丢失、弄乱的问题，你可以放心的折腾。具体情况会在Git底层原理讲解。</p>
@@ -614,9 +626,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
