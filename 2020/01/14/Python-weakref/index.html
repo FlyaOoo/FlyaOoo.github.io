@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="FlyaOoo">
 <meta property="og:description" content="weakref - Weak references在了解弱引用之前，需要弄明白 python 中的 garbage collection （下面简称 gc）。 python中内存管理和垃圾回收主要有两个：  引用计数 分代垃圾回收  引用计数和其他高级语言的引用计数一样：当某个对象被引用一次，计数加一；取消引用一次，计数减一；当计数等于零时，就会将该对象的内存释放了。有很多增加引用计数的方法，例如">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-17T01:39:11.411Z">
+<meta property="og:updated_time" content="2020-01-19T01:41:16.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python--weakref">
 <meta name="twitter:description" content="weakref - Weak references在了解弱引用之前，需要弄明白 python 中的 garbage collection （下面简称 gc）。 python中内存管理和垃圾回收主要有两个：  引用计数 分代垃圾回收  引用计数和其他高级语言的引用计数一样：当某个对象被引用一次，计数加一；取消引用一次，计数减一；当计数等于零时，就会将该对象的内存释放了。有很多增加引用计数的方法，例如">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-17 09:39:11" itemprop="dateModified" datetime="2020-01-17T09:39:11+08:00">2020-01-17</time>
+                <time title="修改时间：2020-01-19 09:41:16" itemprop="dateModified" datetime="2020-01-19T09:41:16+08:00">2020-01-19</time>
               
             
           </span>
@@ -464,7 +464,8 @@
 <li>某个对象作为参数被调用<br>实例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sys</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = []  <span class="comment"># 这里不要使用字符串或者数字，因为python做了缓存，结果会比预期大。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ll = [obj]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.getrefcount(obj)</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="分代垃圾回收"><a href="#分代垃圾回收" class="headerlink" title="分代垃圾回收"></a>分代垃圾回收</h2><p>为什么有了引用计数，还需要这个所谓的分代垃圾回收呢？试想一下，如果有一个对象引用了它自己，就算我们使用<code>del</code>删除了这个对象，它的计数也不会变成0，因为它还有一个指向自己的引用。这种情况称为循环引用。这里请注意！！！（敲黑板了）解决循环引用的方式是标记清除方法，这里就不介绍了，详情看<a href="https://pythoninternal.wordpress.com/2014/08/04/the-garbage-collector/" target="_blank" rel="noopener">这里</a><br><br><br>python中的分代回收主要有两个核心概念：</p>
+<h2 id="分代垃圾回收"><a href="#分代垃圾回收" class="headerlink" title="分代垃圾回收"></a>分代垃圾回收</h2><p>为什么有了引用计数，还需要这个所谓的分代垃圾回收呢？试想一下，如果有一个对象引用了它自己，就算我们使用<code>del</code>删除了这个对象，它的计数也不会变成0，因为它还有一个指向自己的引用。这种情况称为循环引用。这里请注意！！！（敲黑板了）解决循环引用的方式是标记清除方法，这里就不介绍了，详情看<a href="https://pythoninternal.wordpress.com/2014/08/04/the-garbage-collector/" target="_blank" rel="noopener">这里</a></p>
+<p>python中的分代回收主要有两个核心概念：</p>
 <ul>
 <li>首先就是分代中的<code>代</code>。垃圾回收会追踪内存中的所有对象。一个新的对象会在垃圾回收器的第一代开始其生命。如果python对某一代执行垃圾回收，如果某个对象存活下来它将会被移动到下一代。python的垃圾回收器共有三代，一个对象只要在当代的垃圾回收中存活下来，他就会移动到下一代。</li>
 <li>第二个概念就是阈值。在每一代中，垃圾回收器都会有一个对象数量的阈值。如果对象的数量超过了阈值，垃圾回收器就会触发一次回收，任何在回收过程中存活下来的对象都会被移动到下一代中。</li>
