@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录。发现E">
+  <meta name="description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码不能正常跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录">
 <meta name="keywords" content="goland">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录一次Goland设置gomod的问题">
 <meta property="og:url" content="http://yoursite.com/2020/04/26/记录一次Goland设置gomod的问题/index.html">
 <meta property="og:site_name" content="FlyaOoo">
-<meta property="og:description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录。发现E">
+<meta property="og:description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码不能正常跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-26T10:46:37.838Z">
+<meta property="og:updated_time" content="2020-04-26T10:49:14.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录一次Goland设置gomod的问题">
-<meta name="twitter:description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录。发现E">
+<meta name="twitter:description" content="背景手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码不能正常跳转，但是能正常运行。 解决办法首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的官方教程。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录">
 
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2020-04-26 18:14:27 / 修改时间：18:46:37" itemprop="dateCreated datePublished" datetime="2020-04-26T18:14:27+08:00">2020-04-26</time>
+              <time title="创建时间：2020-04-26 18:14:27 / 修改时间：18:49:14" itemprop="dateCreated datePublished" datetime="2020-04-26T18:14:27+08:00">2020-04-26</time>
             
 
             
@@ -439,7 +439,7 @@
       
 
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码跳转，但是能正常运行。</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>手头的go升级到了1.13，默认GO111MODULE开启。想想既然官方都这么做了，就使用gomod吧。我自己平常是使用Goland进行开发的，跟着官方教程走了一遍gomod。在goland中发现代码不能正常跳转，但是能正常运行。</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>首先确认了一下，自己的goland的版本没有问题是能支持gomod。翻了一边goland的<a href="https://www.jetbrains.com/help/go/create-a-project-with-go-modules-integration.html" target="_blank" rel="noopener">官方教程</a>。发现没有还是不能跳转代码。不着急，仔细看看自己的工程目录。发现<code>External Libraries</code>下面只有一个<code>Go SDK</code>，没有自己的导入的三方包，当然不能跳转代码；这时候有人就要问那为什么运行没有出错了，这个其实就是gomod的功能，<code>go module</code>管理的包放在<code>$GOPATH/pkg/mod/</code>下。具体内容就不展开了，官文上写的很清楚。好，回到问题上来，现在的问应该就是怎么把引用的包放到<code>External Libraries</code>下。这里我自己犯了一个错误，其实goland<a href="https://www.jetbrains.com/help/go/create-a-project-with-go-modules-integration.html" target="_blank" rel="noopener">官方教程</a>一开始就讲了这个问题，按组合键<code>⌥⏎</code>选择<code>sync</code>就可以同步依赖包了。只不过当时同步时间过长卡住了，我以为不是这个。后续我还发现可以通过<code>go mod tidy</code>也可以达到相同的效果。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个问题也不能算是一个问题，毕竟不是一个真正的技术问题，但是通过问题我意识到做事情需要冷静分析，看文档要仔细，你能碰到的问题几乎都在文档里写着。</p>
 
