@@ -105,7 +105,7 @@
 <meta property="og:description" content="前言最近刚用Go完成了一个web项目，通过项目算是又重新认识了Go。其中首当其冲就是各种数据结构的初始化，之前一直使用Python作为主语言，Python中一切皆为对象，正常情况下直接赋值就可以完成初始化了。但是在Go中一切却似乎变得没有那么简单，其中的一些概念你需要去理解。比如什么时候使用new、make,什么时候用:=、var；比如零值在Go又是什么意思等等。说实话，作为动态语言入门的我，为了">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2020/05/29/Go中的初始化那些事/make_new.png">
-<meta property="og:updated_time" content="2020-06-12T17:01:39.756Z">
+<meta property="og:updated_time" content="2020-06-12T17:08:11.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go中的初始化那些事">
 <meta name="twitter:description" content="前言最近刚用Go完成了一个web项目，通过项目算是又重新认识了Go。其中首当其冲就是各种数据结构的初始化，之前一直使用Python作为主语言，Python中一切皆为对象，正常情况下直接赋值就可以完成初始化了。但是在Go中一切却似乎变得没有那么简单，其中的一些概念你需要去理解。比如什么时候使用new、make,什么时候用:=、var；比如零值在Go又是什么意思等等。说实话，作为动态语言入门的我，为了">
@@ -402,7 +402,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-13 01:01:39" itemprop="dateModified" datetime="2020-06-13T01:01:39+08:00">2020-06-13</time>
+                <time title="修改时间：2020-06-13 01:08:11" itemprop="dateModified" datetime="2020-06-13T01:08:11+08:00">2020-06-13</time>
               
             
           </span>
@@ -461,12 +461,43 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近刚用<code>Go</code>完成了一个web项目，通过项目算是又重新认识了<code>Go</code>。其中首当其冲就是各种数据结构的初始化，之前一直使用<code>Python</code>作为主语言，<code>Python</code>中一切皆为对象，正常情况下直接赋值就可以完成初始化了。但是在<code>Go</code>中一切却似乎变得没有那么简单，其中的一些概念你需要去理解。比如什么时候使用<code>new</code>、<code>make</code>,什么时候用<code>:=</code>、<code>var</code>；比如<code>零值</code>在<code>Go</code>又是什么意思等等。说实话，作为动态语言入门的我，为了搞清楚这些确实花费了一些时间，所以特此来记录，方便你我他，😁（内容多节选自 <strong><code>Go圣经</code></strong>）。</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="零值"><a href="#零值" class="headerlink" title="零值"></a>零值</h3><p>零值，不是指<code>0</code>，这是抽象的概念。在<code>Go</code>中，不同的类型有不同的零值。<br>|类型|零值|<br>|:—|:—|<br>|数值|0|<br>|布尔值|false|<br>|字符串|””|<br>|接口、引用类型|nil|<br>|数组或结构体|组成元素、字段的对应的零值|<br>在我看来，可以把零值理解成一种<strong>默认值</strong>。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="零值"><a href="#零值" class="headerlink" title="零值"></a>零值</h3><p>零值，不是指<code>0</code>，这是抽象的概念。在<code>Go</code>中，不同的类型有不同的零值。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">零值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">数值</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left">布尔值</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left">字符串</td>
+<td style="text-align:left">“”</td>
+</tr>
+<tr>
+<td style="text-align:left">接口、引用类型</td>
+<td style="text-align:left">nil</td>
+</tr>
+<tr>
+<td style="text-align:left">数组或结构体</td>
+<td style="text-align:left">组成元素、字段的对应的零值</td>
+</tr>
+</tbody>
+</table>
+<p>在我看来，可以把零值理解成一种<strong>默认值</strong>。</p>
 <h3 id="声明方法"><a href="#声明方法" class="headerlink" title="声明方法"></a>声明方法</h3><p><code>Go</code>中主要有四种声明语句：<code>var</code>,<code>const</code>,<code>type</code>,<code>func</code>分别对应了变量，常量，类型和函数。</p>
 <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><code>Go</code>语言将数据类型分为四类：基础类型、复合类型、引用类型和接口类型。引用类型包括指针、切片、字典、通道、函数，这些其实都是对程序中的变量或者是状态的引用。其他类型暂时不做介绍。</p>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h3><p>变量的初始化一般有三种方式：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、 <span class="keyword">var</span> varName varType</span><br><span class="line"><span class="number">2</span>、 <span class="keyword">var</span> varName varType = varValue</span><br><span class="line"><span class="number">3</span>、 varName := varValue</span><br></pre></td></tr></table></figure></p>
 <p>第一种方法会用变量的零值初始化变量；第二种方法就是正常赋值初始化；第三种方法会自动推导变量类型最后赋值初始化。发现<code>Go</code>真的大道至简，你可以省略变量类型，也可以省略初始值。同时也可以发现，在<code>Go</code>中<strong>不存在没有被初始化的变量</strong>。</p>
-<h3 id="make-amp-amp-new"><a href="#make-amp-amp-new" class="headerlink" title="make&amp;&amp;new"></a>make&amp;&amp;new</h3><p>最近太懒了，直接引用了官文了<br><img src="make_new.png" alt></p>
+<h3 id="make-amp-amp-new"><a href="#make-amp-amp-new" class="headerlink" title="make&amp;&amp;new"></a>make&amp;&amp;new</h3><p>最近太懒了，直接引用了官文了<br><img src="/2020/05/29/Go中的初始化那些事/make_new.png"></p>
 
       
     </div>
