@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="FlyaOoo">
 <meta property="og:description" content="抓包总结背景对于App的 逆向分析，抓包 是一个绕不开的话题，同时 被抓包 我看来也算是一个App的命门吧。首先声明下，网上已经有很多大佬写了很详细的文章来介绍各种抓包场景，为什么我还要写，主要为自己能更好地理解，毕竟也是刚入门，嘿嘿。 关于抓包前言对于我们来说，所有数据都是通过标准协议的网络线路传输，所以关于抓包的一切都是以此为基础。从物理层开始，所有的数据就开始通过某种方式开始传输；不过幸运的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-25T09:03:40.659Z">
+<meta property="og:updated_time" content="2020-09-25T09:25:17.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android抓包总结">
 <meta name="twitter:description" content="抓包总结背景对于App的 逆向分析，抓包 是一个绕不开的话题，同时 被抓包 我看来也算是一个App的命门吧。首先声明下，网上已经有很多大佬写了很详细的文章来介绍各种抓包场景，为什么我还要写，主要为自己能更好地理解，毕竟也是刚入门，嘿嘿。 关于抓包前言对于我们来说，所有数据都是通过标准协议的网络线路传输，所以关于抓包的一切都是以此为基础。从物理层开始，所有的数据就开始通过某种方式开始传输；不过幸运的">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-09-25 17:03:40" itemprop="dateModified" datetime="2020-09-25T17:03:40+08:00">2020-09-25</time>
+                <time title="修改时间：2020-09-25 17:25:17" itemprop="dateModified" datetime="2020-09-25T17:25:17+08:00">2020-09-25</time>
               
             
           </span>
@@ -456,7 +456,7 @@
 <h5 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h5><p>中间人攻击，是从英文 <code>Man-in-the-middle attack</code>翻译过来的，缩写为 <code>mitm</code>。</p>
 <h5 id="VPN抓包"><a href="#VPN抓包" class="headerlink" title="VPN抓包"></a>VPN抓包</h5><p>通过自建VPN服务，对流量重定向。</p>
 <h3 id="多场景对抗"><a href="#多场景对抗" class="headerlink" title="多场景对抗"></a>多场景对抗</h3><h4 id="0x01-抓不到https包，APP可联网"><a href="#0x01-抓不到https包，APP可联网" class="headerlink" title="0x01 抓不到https包，APP可联网"></a>0x01 抓不到https包，APP可联网</h4><p>这种情况，大概率是没有成功配置抓包环境，需要正确安装证书。网上有很多教程，就不展开讲了，我也讲不好。这里有一篇关于 <a href="https://github.com/youngwind/blog/issues/108" target="_blank" rel="noopener">Charles捕获HTTPS</a> 原理的文章，感兴趣的可以看看。</p>
-<h4 id="0x02-抓不到包，APP可联网"><a href="#0x02-抓不到包，APP可联网" class="headerlink" title="0x02 抓不到包，APP可联网"></a>0x02 抓不到包，APP可联网</h4><p>首先确定app是可以上网的，但是抓不到包。那么可能会有两种情况：</p>
+<h4 id="0x02-抓不到包，APP可联网"><a href="#0x02-抓不到包，APP可联网" class="headerlink" title="0x02 抓不到包，APP可联网"></a>0x02 抓不到包，APP可联网</h4><p>首先确定app是可以上网的，但是抓不到包。那么可能会有以下情况：</p>
 <ul>
 <li>流量没有走到代理抓包软件上</li>
 <li>流量走的协议比较低，代理抓包软件没法代理</li>
