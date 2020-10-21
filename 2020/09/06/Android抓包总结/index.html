@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="FlyaOoo">
 <meta property="og:description" content="抓包总结背景对于App的 逆向分析，抓包 是一个绕不开的话题，同时 被抓包 我看来也算是一个App的命门吧。首先声明下，网上已经有很多大佬写了很详细的文章来介绍各种抓包场景，为什么我还要写，主要为自己能更好地理解，毕竟也是刚入门，嘿嘿。 关于抓包前言对于我们来说，所有数据都是通过标准协议的网络线路传输，所以关于抓包的一切都是以此为基础。从物理层开始，所有的数据就开始通过某种方式开始传输；不过幸运的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-21T01:47:39.280Z">
+<meta property="og:updated_time" content="2020-10-21T01:54:57.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android抓包总结">
 <meta name="twitter:description" content="抓包总结背景对于App的 逆向分析，抓包 是一个绕不开的话题，同时 被抓包 我看来也算是一个App的命门吧。首先声明下，网上已经有很多大佬写了很详细的文章来介绍各种抓包场景，为什么我还要写，主要为自己能更好地理解，毕竟也是刚入门，嘿嘿。 关于抓包前言对于我们来说，所有数据都是通过标准协议的网络线路传输，所以关于抓包的一切都是以此为基础。从物理层开始，所有的数据就开始通过某种方式开始传输；不过幸运的">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-10-21 09:47:39" itemprop="dateModified" datetime="2020-10-21T09:47:39+08:00">2020-10-21</time>
+                <time title="修改时间：2020-10-21 09:54:57" itemprop="dateModified" datetime="2020-10-21T09:54:57+08:00">2020-10-21</time>
               
             
           </span>
@@ -466,7 +466,7 @@
 <p>针对这种情况，可以使用VPN将流量导向抓包工具，常见的有<code>Postern</code>配合 <code>Charles</code>使用<code>Socks5</code>代理。</p>
 <p>第二种情况，常见于某团系、某里系产品。但是在代码中一般有开关，可以通过<code>hook</code>强行走http。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Java.perform(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    send(<span class="string">"Inside java perform"</span>);</span><br><span class="line">    <span class="comment">// disable socket connect</span></span><br><span class="line">    <span class="keyword">var</span> tunnel2 = Java.use(<span class="string">"com.guess.nvnetwork.tunnel2.a"</span>);</span><br><span class="line">    tunnel2.isSocketConnected.implementation = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>第三种情况，这种情况只能具体问题具体分析了，分析具体的组包、序列化的过程；最后通过逆向还原出来。</p>
-<h4 id="0x03-抓不到https包，APP不可联网"><a href="#0x03-抓不到https包，APP不可联网" class="headerlink" title="0x03 抓不到https包，APP不可联网"></a>0x03 抓不到https包，APP不可联网</h4><p>这种情况基本上就是APP开启<code>SSL Pinning</code>。<code>SSL Pinning</code>简单来说，就是客户端会校验服务端返回的证书。而我们是使用的是抓包软件的证书，当然校验不过去，所以就断网了。针对<code>SSL Pinning</code>，可以从两个角度去破解：</p>
+<h4 id="0x03-抓不到https包，APP不可联网"><a href="#0x03-抓不到https包，APP不可联网" class="headerlink" title="0x03 抓不到https包，APP不可联网"></a>0x03 抓不到https包，APP不可联网</h4><p>这种情况基本上就是APP开启<code>SSL Pinning</code>。<code>SSL Pinning</code>简单来说，就是应用程序中只信任固定证书或是公钥。而我们是使用的是抓包软件的证书，当然校验不过去，所以就断网了。针对<code>SSL Pinning</code>，可以从两个角度去破解：</p>
 <ol>
 <li><p>让客户端不校验证书</p>
 <ul>
